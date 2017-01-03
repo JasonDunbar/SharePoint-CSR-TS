@@ -1,0 +1,30 @@
+{
+  "name": "sharepoint-csr-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=5.6.0"
+  },
+  "author": "Jason Dunbar",
+  "license": "ISC",
+  "dependencies": {
+    "@types/sharepoint": "^2013.0.31",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^2.0.34",
+    "@types/sharepoint": "^2013.0.31",
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-typescript": "^3.0.1",
+    "typescript": "^2.0.3",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

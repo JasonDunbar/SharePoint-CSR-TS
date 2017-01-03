@@ -1,1 +1,1 @@
-# SharePoint-CSR-TS
+# TypeScript SharePoint Boiler Plate
