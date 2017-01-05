@@ -15,5 +15,9 @@ It is not a complete working example and there's a certain degree of assumed kno
 3. Clone this repository
 4. Open a command line / terminal and execute 'npm install'
 5. Create your overrides in the Typescript code contained within the /source directory
-6. Build and upload to SharePoint
+6. Create the SharePoint list(s)
+7. Build and upload to SharePoint
    * to build, run `gulp bundle` from a command line / terminal
+8. Get the output file `./dist/bundle.js` by default and upload to the SharePoint Asset Library for your site
+9. Upload jQuery to the same place
+10. Add the JSLink values where needed, pointing to the file
