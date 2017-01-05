@@ -1,6 +1,6 @@
 export class Title {
   NewForm: Function = this.hiddenFieldTemplate;
-  EditForm: Function = this.hiddenFieldTemplate;
+  EditForm: Function = this.hiddenFieldTemplateOnPreRender;
 
   // This function provides the rendering logic
   public hiddenFieldTemplate() {
@@ -9,6 +9,6 @@ export class Title {
 
   // This function provides the rendering logic 
   public hiddenFieldTemplateOnPreRender(ctx) { 
-      $(".csrHiddenField").closest("tr").hide(); 
+      //$(".csrHiddenField").closest("tr").hide(); 
   } 
 }

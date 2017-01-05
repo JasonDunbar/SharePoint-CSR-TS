@@ -49,7 +49,7 @@ gulp.task('bundle', function () {
 });
 
 gulp.task('watch', function() {
-    gulp.watch(paths.scripts, ['scripts']);
+    gulp.watch(paths.ts, ['bundle']);
 });
  
-gulp.task('default', ['clean-scripts', 'scripts', 'watch']);
+gulp.task('default', ['clean-scripts', 'bundle', 'watch']);

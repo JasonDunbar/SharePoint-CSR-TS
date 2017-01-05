@@ -1,3 +1,5 @@
+// JS Link Property
+// ~site/SiteAssets/vendor/js/jquery.js|~site/SiteAssets/vendor/js/foundation.js|~site/SiteAssets/bundle.js
 import { ListOverrideTemplate } from "./Templates";
 
 class listRenderOverride {
@@ -18,11 +20,3 @@ class listRenderOverride {
 let customOverride = new listRenderOverride();
 customOverride.Templates = new ListOverrideTemplate();
 SPClientTemplates.TemplateManager.RegisterTemplateOverrides(customOverride);
-
-/* Sample
-var requestsListOverride = {};
-requestsListOverride.Templates = {};
-requestsListOverride.Templates.Item = fipViews.requestItemHtml;
-requestsListOverride.ListTemplateType = 100;
-SPClientTemplates.TemplateManager.RegisterTemplateOverrides(requestsListOverride);
-*/
