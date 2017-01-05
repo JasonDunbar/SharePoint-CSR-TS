@@ -23,7 +23,7 @@ export class ListOverrideTemplate {
 
     // Use Ajax call to get list items (async)
     $.ajax({
-      url: webUrl + '/_api/web/lists/getbytitle(\'requests\')/items',
+      url: webUrl + '/_api/web/lists/getbytitle(\'CustomList\')/items',
       type: 'GET',
       headers: { 'accept': 'application/json;odata=verbose' },
       success: (responseData) => {
@@ -56,8 +56,7 @@ export class ListOverrideTemplate {
 
     itemHtml = '<div class="listItem">';
     itemHtml += String.format('<a href="{0}">{1}</a>', ctx.CurrentItem.ID, ctx.CurrentItem.Title);
-    itemHtml += String.format('<div id="panel{0}" class="accordion-content" data-tab-content>', ctx.CurrentItem.ID);
-    //itemHtml += String.format('<a href="{0}" onclick="EditItem2(event, \'{0}\');return false;" class="text-right;"><img border="0" alt="edit" src="/_layouts/15/images/edititem.gif?rev=23"> Edit Request</a>', url);
+    itemHtml += String.format('<div id="panel{0}"></div>', ctx.CurrentItem.ID);
     
     return itemHtml;
   }

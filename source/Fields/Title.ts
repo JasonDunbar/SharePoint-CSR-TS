@@ -9,6 +9,6 @@ export class Title {
 
   // This function provides the rendering logic 
   public hiddenFieldTemplateOnPreRender(ctx) { 
-      //$(".csrHiddenField").closest("tr").hide(); 
+      $(".csrHiddenField").closest("tr").hide(); 
   } 
 }

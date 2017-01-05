@@ -3,18 +3,24 @@
 import { ListOverrideTemplate } from "./Templates";
 
 class listRenderOverride {
-  // declare the properties for objects and configuration
-  Templates: any;
-  ListTemplateType: number;
+  // Register pre-render functions
+  // CHALLENGE - for both the PreRender and PostRender objects we must use <any> as the type to avoid Typescript compilation issues
+  // @types\sharepoint specifies that the PreRender and PostRender objects are of type RenderCallback or RenderCallback[] but does not expose the type
+  OnPreRender: Array<any> =  [
+    (ctx: Object) => {
+      console.log("OnPreRender fired");
+    }
+  ];
 
-  // deal with PreRender and PostRender
-  OnPreRender =  (ctx: Object) => {
-    console.log("OnPreRender fired");
-  };
+  // Initialise the Templates object that will contain the overrides
+  Templates: Object;
 
-  OnPostRender = (ctx: Object) => {
-    console.log("OnPostRender fired");
-  };
+  // Register post-render functions
+  OnPostRender: Array<any> = [
+    (ctx: Object) => {
+      console.log("OnPostRender fired");
+    }
+  ];
 }
 
 let customOverride = new listRenderOverride();
