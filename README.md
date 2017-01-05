@@ -16,4 +16,4 @@ It is not a complete working example and there's a certain degree of assumed kno
 4. Open a command line / terminal and execute 'npm install'
 5. Create your overrides in the Typescript code contained within the /source directory
 6. Build and upload to SharePoint
-   * to build, run gulp bundle from a command line / terminal
+   * to build, run `gulp bundle` from a command line / terminal
