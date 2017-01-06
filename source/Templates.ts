@@ -32,7 +32,7 @@ export class ListOverrideTemplate {
         listItems = responseData.d.results;
         
         for (let listItem of listItems) {
-          itemHtml += '<p>' + listItem.ID + '</p>';
+          itemHtml += '<p><strong>List Item Title: </strong>' + listItem.Title + ' <strong>List Item ID:</strong> ' + listItem.ID + '</p>';
         }
         $('#dataContainer').html(itemHtml); // Place the Items HTML into the main body in DOM
       },

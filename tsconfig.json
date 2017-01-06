@@ -3,15 +3,7 @@
     "target": "es5",
     "module": "commonjs"
     //"outFile": "app.js"
-  },
-  
-  "files": [
-    //"source/Fields.ts",
-    //"source/ListForm.ts",
-    "source/Override.ts",
-    "source/Templates.ts"
-  ],
-  
+  },  
   "exclude": [
       "node_modules"
   ]
