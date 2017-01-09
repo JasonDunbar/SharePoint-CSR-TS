@@ -4,7 +4,7 @@ This is a working example of a Typescript project designed to modularise and sim
 
 It utilises Node and NPM as the development and build framework - you should install these into your development environment if you plan to use this project as a starting point.
 
-One of the ways in which we simplify the process of creating JSOM SharePoint code in Typescript is through the use of Typings. Here we're using @types\sharepoint in order to provide SharePoint object intellisense within the IDE.
+Also, we simplify the process of creating JSOM SharePoint code in Typescript is through the use of Typings. Here we're using @types\sharepoint in order to provide SharePoint object intellisense within the IDE - I used Visual Studio Code.
 
 ## What it's not
 It is not a complete working example and there's a certain degree of assumed knowledge in order to get this up and running; namely: knowledge of Typescript projects; how to set up a SharePoint list and how to set the value of JSLink in various places.
