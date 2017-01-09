@@ -1,6 +1,7 @@
 import { Fields } from "./Fields"
 
 export class ListOverrideTemplate {
+  //  Declare the objects that can be overriden within the Template
   View: Object;
   Body: Object;
   Header: Object;
@@ -10,14 +11,15 @@ export class ListOverrideTemplate {
   Fields: Object;
 
   constructor() {
+    // Further define the objects to override
     this.Body = this.renderBody; // Override to custom render the entire Body
     //this.Item = this.renderItem; // Override to custom render each list item (is executed for each item)
-    this.Fields = new Fields();
+    this.Fields = new Fields(); // Overriden object that will determine the rendering of fields on form views
   }
 
   public renderBody(ctx) {
     let bodyHtml: string;
-    let itemHtml: string = ''; // important to set this, or else we get an undesired 'undefined' when building the HTML
+    let itemHtml: string = ''; // important to set this, or else we get an 'undefined' at the beginning when building the HTML
     let webUrl = ctx.HttpRoot;
     let listItems: Array<Object>;
 
@@ -32,6 +34,8 @@ export class ListOverrideTemplate {
         listItems = responseData.d.results;
         
         for (let listItem of listItems) {
+          // the following line will raise typescript compile time errors due to it not being aware of the listItem object definition.
+          // as long as the Typescript compiles successfully to Javascript and you can see the output, you can ignore such 'errors'
           itemHtml += '<p><strong>List Item Title: </strong>' + listItem.Title + ' <strong>List Item ID:</strong> ' + listItem.ID + '</p>';
         }
         $('#dataContainer').html(itemHtml); // Place the Items HTML into the main body in DOM
@@ -43,7 +47,7 @@ export class ListOverrideTemplate {
     });
 
     // Construct the body of the list view
-    // 'dataContainer' is added to in the DOM in the 'success' part of the Ajax call
+    // 'dataContainer' is populated as a result of the above asynch ajax call
     bodyHtml = '\
       <tr><td colspan="13"> \
         <div id="dataContainer"></div> \

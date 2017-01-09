@@ -26,17 +26,6 @@ gulp.task('clean-scripts', function () {
     .pipe(clean());
 });
 
-gulp.task('scripts', function() {
-    var tsResult = gulp.src(paths.ts)
-        //.pipe(sourcemaps.init())
-        .pipe(tsProject())
-        
-    return tsResult.js
-        //.pipe(sourcemaps.write({includeContent: false, sourceRoot: '../source'})) // write inline source maps
-        .pipe(concat('app.js'))
-        .pipe(gulp.dest(paths.dist));
-});
-
 gulp.task('bundle', function () {  
     return browserify()
         .add('./source/Override.ts')
